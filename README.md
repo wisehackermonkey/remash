@@ -22,7 +22,7 @@ To test it out open two tabs and type something, and see it replicate over to th
 [stackoverflow.com](https://stackoverflow.com/questions/53522052/flask-app-valueerror-signal-only-works-in-main-thread)
 
 
-# Install 
+# Install   
 ```
 pip install -r requirements.txt
 ```
