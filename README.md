@@ -15,7 +15,8 @@ This project uses docker to host the web server, that I manage maintain,
 To test it out open two tabs and type something, and see it replicate over to the other tab.
 ```
 
-
+# TODO
+- capcha per character
 
 # NOT WORKING ANYMORE due to flask_socketio bug
 ### bug is descripbed here 
