@@ -15,20 +15,24 @@ This project uses docker to host the web server, that I manage maintain,
 To test it out open two tabs and type something, and see it replicate over to the other tab.
 ```
 
-# TODO
-- capcha per character
-
-# NOT WORKING ANYMORE due to flask_socketio bug
-### bug is descripbed here 
-[stackoverflow.com](https://stackoverflow.com/questions/53522052/flask-app-valueerror-signal-only-works-in-main-thread)
+# (Easiest) Run using docker 
+# If you just want to try it out id recommend using play-with-docker.com 
+### [play-with-docker.com](https://labs.play-with-docker.com/)
 
 
-# Install   
+# Run using docker for everyone else
+```bash
+docker login
+>docker run -it --rm -p 80:8080 wisehackermonkey/remash
+```
+
+# The (hardway)
+#### Install   
 ```
 pip install -r requirements.txt
 ```
 
-### run app in windows (CMD)
+##### run app in windows (CMD)
 ```bash
 set FLASK_APP=main.py
 set FLASK_ENV=development
@@ -36,16 +40,34 @@ set FLASK_ENV=development
 flask run
 ```
 
-### run app in windows (POWERSHELL)
+##### run app in windows (POWERSHELL)
 ```bash
 $env:FLASK_APP="main.py"
 $env:FLASK_ENV="development"
 flask run
 ```
-## Run app
+#### Run app
 ```bash
 >python main.py
 ```
+
+
+
+### in browser go to 
+```
+"localhost:80" for mac
+"<dockermachine ip>:80" for windows
+example "localhost:80"
+```
+
+## Bugs due to flask_socketio bug
+#### bug is descripbed here 
+[stackoverflow.com](https://stackoverflow.com/questions/53522052/flask-app-valueerror-signal-only-works-in-main-thread)
+
+
+# TODO
+- capcha per character
+- improve character syncing useing the same algorithm that google docs uses that was created by microsoft
 
 # Links:
 - [docs for flask-socketio](https://flask-socketio.readthedocs.io/en/latest/)
