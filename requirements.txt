@@ -6,3 +6,4 @@ Jinja2==2.10
 MarkupSafe==1.0
 uWSGI==2.0.17.1
 Werkzeug==0.15.3
+python-dotenv==0.14.0

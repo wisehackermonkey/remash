@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Captcha</h1>
+   
+    <!-- <div> 
+    </div> -->
+    <div>
+        <form method="POST" action="/submit">
+            <!-- <div class="h-captcha" data-sitekey="aedd98f2-fb87-4a94-a1d2-b82133b99216"></div>
+            <script src="https://hcaptcha.com/1/api.js" async defer></script> -->
+            {{ captcha_html|safe }}
+            <button type="submit">Verify</button>
+        </form>
+    </div>
+</body>
+
+</html>

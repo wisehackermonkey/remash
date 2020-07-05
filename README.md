@@ -32,6 +32,13 @@ docker login
 pip install -r requirements.txt
 ```
 
+
+##### run app in linux
+```bash
+export FLASK_APP=main.py
+export FLASK_ENV=development
+flask run
+```
 ##### run app in windows (CMD)
 ```bash
 set FLASK_APP=main.py
@@ -67,9 +74,18 @@ example "localhost:80"
 
 # TODO
 - capcha per character
+    - add .env for secrets
+        - add example.env
+    - add hcaptcha to server
 - improve character syncing useing the same algorithm that google docs uses that was created by microsoft
+- color each users typing text
+- add text box for entering the one character
+- add rules description
 
 # Links:
 - [docs for flask-socketio](https://flask-socketio.readthedocs.io/en/latest/)
 
 - [tutorial for use of flask and socket.io together](https://codeburst.io/building-your-first-chat-application-using-flask-in-7-minutes-f98de4adfa5d)
+
+
+

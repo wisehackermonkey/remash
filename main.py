@@ -27,15 +27,34 @@ https://codeburst.io/building-your-first-chat-application-using-flask-in-7-minut
 from flask import Flask, render_template
 from flask_socketio import SocketIO
 
+from flask_hcaptcha import hCaptcha
+
+
 app = Flask(__name__)
+hcaptcha = hCaptcha(app)
 socketio = SocketIO(app)
 
 test_string = "wow it works look mom no hands!"
 
+
+
 @app.route("/")
 def index():
     return render_template("index.html")
+@app.route("/confirm")
+def confirm():
+    return render_template("captcha.html")
 
+
+@app.route("/submit", methods=["POST"])
+def submit():
+
+    if hcaptcha.verify():
+        # SUCCESS
+        pass
+    else:
+        # FAILED
+        pass
 
 def messageReceived():
     print('Message was received')
@@ -53,4 +72,4 @@ def sync_client_on_load():
     socketio.emit("sync", test_string)
 
 if __name__ == '__main__':
-    socketio.run(app, host="0.0.0.0", debug=True, port=8080)
+    socketio.run(app, host="0.0.0.0", debug=True, port=3000)
