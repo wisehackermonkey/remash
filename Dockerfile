@@ -1,4 +1,4 @@
-FROM python:3.8.6-alpine3.12
+FROM balenalib/raspberry-pi-debian-python:latest
 WORKDIR /code
 COPY requirements.txt ./
 # RUN sudo apt install uwsgi-plugin-python3
