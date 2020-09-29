@@ -32,7 +32,7 @@ docker run -it --rm -p 80:8080 wisehackermonkey/remash
 
 # Deploy
 ```bash
-docker run -d --restart=always -p 80:8080 wisehackermonkey/remash
+docker run -d --restart=always --name remash -p 80:8080 wisehackermonkey/remash
 ```
 
 
