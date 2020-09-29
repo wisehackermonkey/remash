@@ -30,6 +30,11 @@ docker login
 docker run -it --rm -p 80:8080 wisehackermonkey/remash
 ```
 
+# Deploy
+```bash
+docker run -d --restart=always -p 80:8080 wisehackermonkey/remash
+```
+
 
 # The (hardway)
 #### Install   
