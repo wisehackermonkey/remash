@@ -27,13 +27,24 @@ docker login
 ```
 # Docker Run/Install
 ```bash
-docker run -it --rm -p 80:8080 wisehackermonkey/remash
+docker run -it --rm -p 80:8080 --name remash wisehackermonkey/remash
 ```
 
 # Deploy
 ```bash
-docker run -d --restart=always --name remash -p 80:8080 wisehackermonkey/remash
+docker run -d --restart=always --name remash -p 8080:2000 wisehackermonkey/remash
 ```
+
+# Deploy ARM (CURRENTLY NOT WORKING 20200929)
+```bash
+git clone https://github.com/wisehackermonkey/remash.git
+cd remash
+docker build . -t wisehackermonkey/remash:arm
+docker login
+docker push wisehackermonkey/remash:arm 
+docker run -d --restart=always --name remash -p 2000:8080 wisehackermonkey/remash
+```
+
 
 
 # The (hardway)
