@@ -1,6 +1,7 @@
-FROM python:3.6.8-alpine3.6
+FROM python:3.8.6-alpine3.12
 WORKDIR /code
 COPY requirements.txt ./
+# RUN sudo apt install uwsgi-plugin-python3
 RUN pip install --no-cache-dir -r ./requirements.txt
 COPY . .
 
