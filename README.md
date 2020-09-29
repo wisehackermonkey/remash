@@ -25,6 +25,11 @@ To test it out open two tabs and type something, and see it replicate over to th
 docker login
 >docker run -it --rm -p 80:8080 wisehackermonkey/remash
 ```
+# Docker Run/Install
+```bash
+docker run -it --rm -p 80:8080 wisehackermonkey/remash
+```
+
 
 # The (hardway)
 #### Install   
@@ -52,12 +57,14 @@ flask run
 ```
 
 
-
 ### in browser go to 
 ```
-"localhost:80" for mac
-"<dockermachine ip>:80" for windows
-example "localhost:80"
+in browser go to 
+http://localhost:80
+Type something into the text box
+open another browser tab to 
+http://localhost:80
+and type something else you will see the stuff replicated across the browser tabs!
 ```
 
 ## Bugs due to flask_socketio bug
