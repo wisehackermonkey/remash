@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+    remash:
+        restart: always
+        container_name: remash
+        ports:
+            - '7788:2000'
+        image: wisehackermonkey/remash
